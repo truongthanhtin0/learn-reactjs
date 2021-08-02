@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import { Box } from "@material-ui/core";
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
@@ -8,6 +9,7 @@ function Product(props) {
 
   return (
     <Box mt={4}>
+      <Typography>Trương Thanh Tín - TVI</Typography>
       <Switch>
         <Route path={match.url} component={ProductList} exact />
       </Switch>
