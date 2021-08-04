@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import categoryApi from "./api/categoryApi";
 import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
