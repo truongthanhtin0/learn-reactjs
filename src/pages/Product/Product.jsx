@@ -9,7 +9,6 @@ function Product(props) {
 
   return (
     <Box mt={4}>
-      <Typography>Trương Thanh Tín - TVI</Typography>
       <Switch>
         <Route path={match.url} component={ProductList} exact />
       </Switch>

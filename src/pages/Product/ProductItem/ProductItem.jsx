@@ -19,12 +19,21 @@ function ProductItem(props) {
                     }
                     alt={item.name}
                     width="100%"
-                    height={200}
+                    height={250}
                   />
                 </Box>
                 <Box paddingLeft={2} paddingRight={2}>
                   <Typography>{item.name}</Typography>
-                  <Typography>{item.salePrice}</Typography>
+                  <Typography>
+                    <Box display="flex" text-align="center">
+                      <Box components="span" fontSize="18px" fontWeight="bold" marginRight={2} marginY="auto">
+                        {new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(item.salePrice)}
+                      </Box>
+                      <Box components="span" fontSize="24px" fontWeight="bold" color="red">
+                        {item.promotionPercent > 0 ? `-${item.promotionPercent}%` : ""}
+                      </Box>
+                    </Box>
+                  </Typography>
                 </Box>
               </Box>
             </Grid>

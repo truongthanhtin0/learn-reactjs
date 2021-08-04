@@ -10,14 +10,6 @@ import Counter from "./redux/Couter/index";
 import Swap from "./redux/Swap/index";
 
 function App() {
-  useEffect(() => {
-    const fetchCategory = async () => {
-      const categoryList = await categoryApi.getAll();
-      console.log("Log : categoryList", categoryList);
-    };
-    fetchCategory();
-  }, []);
-
   return (
     <div className="App">
       <Header />
